@@ -1,0 +1,23 @@
+# Ignore node modules (if using Node.js later)
+node_modules/
+
+# Ignore build or cache folders
+dist/
+build/
+
+# Mac system files
+.DS_Store
+
+# VS Code settings folder
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Ignore environment files (if added later)
+.env

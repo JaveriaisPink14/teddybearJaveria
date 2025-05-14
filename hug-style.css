@@ -1,0 +1,56 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffccff;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff0066;
+    margin-top: 20px;
+}
+
+.hug-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.teddy-hug {
+    width: 250px;
+    height: auto;
+}
+
+/* Balloons Styling */
+.balloons-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Ensure balloons do not block clicks */
+}
+
+.balloon {
+    width: 120px; /* Bigger size for better visibility */
+    position: absolute;
+    bottom: -150px; /* Start lower for full animation */
+    opacity: 1;  /* Full visibility */
+    filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.5)); /* Stronger shadow */
+    animation: fly 6s ease-in-out infinite;
+}
+
+/* Random Positions for Balloons */
+.balloon:nth-child(1) { left: 10%; animation-duration: 6s; }
+.balloon:nth-child(2) { left: 40%; animation-duration: 5s; }
+.balloon:nth-child(3) { left: 70%; animation-duration: 7s; }
+.balloon:nth-child(4) { left: 90%; animation-duration: 6.5s; }
+
+@keyframes fly {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-120vh) scale(1.2); opacity: 0.8; }
+}
